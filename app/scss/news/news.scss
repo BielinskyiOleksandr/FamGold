@@ -1,0 +1,144 @@
+.news {
+    .button-box {
+        margin-bottom: 70px;
+        a:first-child {
+            margin-right: 20px;
+        }
+        a {
+            @media (max-width: 990px) {
+                display: none;
+            }
+        }
+        @media (max-width: 990px) {
+            margin-bottom: 50px;
+        }
+    }
+    .no-padding {
+        @media (max-width: 990px) {
+            padding: 0;
+        }
+    }
+    .news-watch {
+        text-align: center;
+        margin-bottom: 50px;
+        text-decoration-line: underline;
+        color: #59956A;
+        font-size: 1.1rem;
+        font-family: "Museo-medium";
+    }
+    .news-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        margin-bottom: 50px;
+        @media (max-width: 990px) {
+            margin-bottom: 25px;
+        }
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+        .news-box {
+            border: .5px solid rgba(206, 179, 136, .3);
+            border-bottom: none;
+            position: relative;
+            overflow: hidden;
+            &:hover {
+                .img-news {
+                    transform: translateY(-500px);
+                    @media (max-width: 990px) {
+                        transform: translateY(0px); 
+                    }
+                }
+            }
+            .img-news {
+                position: absolute;
+                z-index: 2;
+                opacity: 1;
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+                transition: .5s;
+                @media (max-width: 990px) {
+                    position: relative;
+                }
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+            .news-box-content {
+                position: relative;
+                padding: 44px 25px;
+                @media (max-width: 990px) {
+                    padding: 25px 30px;
+                }
+                .date-news {
+                    font-size: 1.125rem;
+                    color: rgba(0, 0, 0, .6);
+                    font-family: "Museo-regular";
+                    margin-bottom: 15px;
+                    @media (max-width: 1200px) {
+                        font-size: 1rem;
+                        margin-bottom: 10px;
+                    }
+                }
+                .title-news {
+                    color: $colortext;
+                    font-size: 1.25rem;
+                    font-family: "Museo-bold";
+                    margin-bottom: 20px;
+                    @media (max-width: 1200px) {
+                        font-size: 1.2rem;
+                        margin-bottom: 15px;
+                    }
+                }
+                .text-news {
+                    font-family: "Museo-regular";
+                    font-size: 1.125rem;
+                    color: rgba(21, 10, 1, .8);
+                    margin-bottom: 53px;
+                    line-height: 170%;
+                    @media (max-width: 1200px) {
+                        font-size: 1rem;
+                        margin-bottom: 40px;
+                    }
+                }
+                .link-news {
+                    color: #59956A;
+                    font-size: 1.2rem;
+                    font-family: "Museo-regular";
+                    position: relative;
+                    margin-bottom: 30px;
+                    display: block;
+                    position: relative;
+                    left: 15px;
+                    @media (max-width: 1200px) {
+                        font-size: 1.1rem;
+                        margin-bottom: 10px;
+                    }
+                    @media (max-width: 768px) {
+                        margin-bottom: 20px;
+                    }
+                    &::before {
+                        content: '';
+                        display: block;
+                        height: 75px;
+                        width: 75px;
+                        border-radius: 50%;
+                        border: 1px solid rgba(72, 128, 87, .5);
+                        position: absolute;
+                        bottom: -28px;
+                        left: -8px;
+                        @media (max-width: 768px) {
+                            left: -14px;
+                        }
+                    }
+                    &::after {
+                        content: url(../img/icon/arrows.svg);
+                        position: relative;
+                        left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

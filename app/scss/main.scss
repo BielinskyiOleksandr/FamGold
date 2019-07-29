@@ -1,0 +1,97 @@
+@import 'var/varibels';
+@import 'text/text';
+
+@import 'header/header';
+@import 'footer/footer';
+
+@import 'bredcrumbs/bredcrumbs';
+@import 'home/home';
+@import 'news/news';
+
+
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+main {
+	min-height: calc(100vh - 150px);
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+h1,h2,h3,h4,h5,p {
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+
+//YATRA
+@font-face {
+	font-family: "Yatra-regular";
+	src: url("../fonts/yatra/YatraOne-Regular.ttf");
+}
+
+//OXYGEN
+@font-face {
+	font-family: "Oxygen-bold";
+	src: url("../fonts/oxygen/Oxygen-Bold.ttf");
+}
+
+//LATO
+@font-face {
+	font-family: "Lato-bold";
+	src: url("../fonts/lato/Lato-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Lato-regular";
+	src: url("../fonts/lato/Lato-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Lato-Light";
+	src: url("../fonts/lato/Lato-Light.ttf");
+}
+
+//MUSEO
+@font-face {
+	font-family: "Museo-bold";
+	src: url("../fonts/museo/MuseoSansCyrl_2.otf");
+}
+
+@font-face {
+	font-family: "Museo-medium";
+	src: url("../fonts/museo/MuseoSansCyrl_1.otf");
+}
+
+@font-face {
+	font-family: "Museo-regular";
+	src: url("../fonts/museo/MuseoSansCyrl_0.otf");
+}
+
+@font-face {
+	font-family: "Museo-light";
+	src: url("../fonts/museo/MuseoSansCyrl.otf");
+}

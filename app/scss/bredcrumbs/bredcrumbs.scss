@@ -1,0 +1,25 @@
+.bredcrumbs {
+    position: relative;
+    ul {
+        display: flex;
+        li {
+            display: block;
+            a {
+                font-size: .87rem;
+                color: $colortext;
+                font-family: "Museo-regular";
+                &::after {
+                    content: '/';
+                    margin: 0 5px;
+                }
+            }
+        }  
+        li:last-child {
+            a {
+                &::after {
+                    content: '';
+                }
+            }
+        }
+    }
+}
