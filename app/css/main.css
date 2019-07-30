@@ -17,6 +17,12 @@
   font-size: 2.5rem;
   margin-bottom: 50px; }
 
+.title-sm {
+  display: block;
+  font-family: "Museo-medium";
+  font-size: 1rem;
+  margin-bottom: 30px; }
+
 .button-box {
   margin-bottom: 50px; }
 
@@ -754,6 +760,88 @@ footer {
           content: url(../img/icon/arrows.svg);
           position: relative;
           left: 10px; }
+
+.vebinar .vebinar-container .vebinar-box {
+  color: #150A01;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  border: 1px solid rgba(206, 179, 136, 0.3); }
+  @media (max-width: 990px) {
+    .vebinar .vebinar-container .vebinar-box {
+      grid-template-columns: 100%;
+      grid-template-rows: auto; } }
+  .vebinar .vebinar-container .vebinar-box:hover .vebinar-date {
+    background: rgba(206, 179, 136, 0.3); }
+  .vebinar .vebinar-container .vebinar-box .vebinar-date {
+    padding: 40px 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+    @media (max-width: 990px) {
+      .vebinar .vebinar-container .vebinar-box .vebinar-date {
+        padding: 30px 15px; } }
+    .vebinar .vebinar-container .vebinar-box .vebinar-date .date {
+      font-size: 1.8em;
+      font-family: "Museo-bold";
+      margin-bottom: 10px; }
+      @media (max-width: 990px) {
+        .vebinar .vebinar-container .vebinar-box .vebinar-date .date {
+          font-size: 1.5rem; } }
+    .vebinar .vebinar-container .vebinar-box .vebinar-date .time {
+      font-size: 1.25rem;
+      font-family: "Museo-light"; }
+      @media (max-width: 990px) {
+        .vebinar .vebinar-container .vebinar-box .vebinar-date .time {
+          font-size: 1.1rem; } }
+  .vebinar .vebinar-container .vebinar-box .vebinar-info {
+    padding: 20px 30px;
+    border-left: 1px solid rgba(206, 179, 136, 0.3);
+    word-wrap: break-word; }
+    @media (max-width: 990px) {
+      .vebinar .vebinar-container .vebinar-box .vebinar-info {
+        border-top: 1px solid rgba(206, 179, 136, 0.3);
+        border-left: 0;
+        padding: 20px; } }
+    .vebinar .vebinar-container .vebinar-box .vebinar-info .author {
+      font-size: 1.2rem;
+      font-family: "Museo-light";
+      margin-bottom: 10px; }
+      @media (max-width: 990px) {
+        .vebinar .vebinar-container .vebinar-box .vebinar-info .author {
+          font-size: 1rem; } }
+    .vebinar .vebinar-container .vebinar-box .vebinar-info .name-vebinar {
+      font-size: 1.4rem;
+      font-family: "Museo-bold";
+      margin-bottom: 20px; }
+      @media (max-width: 990px) {
+        .vebinar .vebinar-container .vebinar-box .vebinar-info .name-vebinar {
+          font-size: 1.1rem; } }
+    .vebinar .vebinar-container .vebinar-box .vebinar-info .title-link {
+      margin-right: 10px;
+      font-family: "Museo-light"; }
+      @media (max-width: 990px) {
+        .vebinar .vebinar-container .vebinar-box .vebinar-info .title-link {
+          margin-bottom: 15px; } }
+    .vebinar .vebinar-container .vebinar-box .vebinar-info .link-vebinar {
+      color: #59956A;
+      font-size: 1.125rem;
+      font-family: "Museo-light"; }
+      @media (max-width: 990px) {
+        .vebinar .vebinar-container .vebinar-box .vebinar-info .link-vebinar {
+          font-size: 1rem; } }
 
 .container {
   max-width: 1180px;

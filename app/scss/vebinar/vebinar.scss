@@ -1,0 +1,104 @@
+.vebinar {
+    .vebinar-container {
+        .vebinar-box {
+            color: $colortext;
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+
+            @media (max-width:990px) {
+                grid-template-columns: 100%;
+                grid-template-rows: auto;
+            }
+
+            &:hover {
+                .vebinar-date {
+                    background: rgba(206, 179, 136, .3);
+                }
+            }
+
+            border: 1px solid rgba(206, 179, 136, .3);
+
+            .vebinar-date {
+                padding: 40px 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: .3s;
+
+                @media (max-width: 990px) {
+                    padding: 30px 15px;
+                }
+
+                .date {
+                    font-size: 1.8em;
+                    font-family: "Museo-bold";
+                    margin-bottom: 10px;
+
+                    @media (max-width: 990px) {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .time {
+                    font-size: 1.25rem;
+                    font-family: "Museo-light";
+
+                    @media (max-width: 990px) {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+
+            .vebinar-info {
+                padding: 20px 30px;
+                border-left: 1px solid rgba(206, 179, 136, .3);
+                word-wrap: break-word;
+
+                @media (max-width: 990px) {
+                    border-top: 1px solid rgba(206, 179, 136, .3);
+                    border-left: 0;
+                    padding: 20px;
+                }
+
+                .author {
+                    font-size: 1.2rem;
+                    font-family: "Museo-light";
+                    margin-bottom: 10px;
+
+                    @media (max-width: 990px) {
+                        font-size: 1rem;
+                    }
+                }
+
+                .name-vebinar {
+                    font-size: 1.4rem;
+                    font-family: "Museo-bold";
+                    margin-bottom: 20px;
+
+                    @media (max-width: 990px) {
+                        font-size: 1.1rem;
+                    }
+                }
+
+                .title-link {
+                    margin-right: 10px;
+                    font-family: "Museo-light";
+
+                    @media (max-width: 990px) {
+                        margin-bottom: 15px;
+                    }
+                }
+
+                .link-vebinar {
+                    color: #59956A;
+                    font-size: 1.125rem;
+                    font-family: "Museo-light";
+
+                    @media (max-width: 990px) {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
