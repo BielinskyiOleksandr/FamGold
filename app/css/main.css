@@ -76,7 +76,8 @@ header {
                 align-items: center;
         cursor: pointer;
         margin-right: 5px;
-        position: relative; }
+        position: relative;
+        margin: 10px 0 0 0; }
         header .header-container .nav-menu-button::before {
           content: 'Меню';
           position: absolute;
@@ -96,7 +97,8 @@ header {
     border-bottom: .5px solid #CEB388; }
     @media (max-width: 990px) {
       header .header-container .header-info {
-        grid-template-columns: 4fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
         padding: 5px 0; } }
     header .header-container .header-info .header-info-logo {
       display: grid;
@@ -108,8 +110,9 @@ header {
         header .header-container .header-info .header-info-logo {
           grid-template-columns: 1fr 5fr; } }
       @media (max-width: 576px) {
-        header .header-container .header-info .header-info-logo img {
-          height: 50px; } }
+        header .header-container .header-info .header-info-logo .logotype-header {
+          height: 50px;
+          display: none; } }
       header .header-container .header-info .header-info-logo .info-text {
         display: -webkit-box;
         display: -webkit-flex;
@@ -322,6 +325,28 @@ header {
   @media (max-width: 990px) {
     header .header-menu {
       display: none; } }
+
+.hidden {
+  position: absolute; }
+
+.hidden {
+  -webkit-transform: translateY(-370px);
+      -ms-transform: translateY(-370px);
+          transform: translateY(-370px); }
+
+.fixed {
+  position: fixed;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.9s;
+  transition: -webkit-transform 0.9s;
+  -o-transition: transform 0.9s;
+  transition: transform 0.9s;
+  transition: transform 0.9s, -webkit-transform 0.9s;
+  z-index: 9999;
+  background: #fff;
+  width: 100%; }
 
 footer {
   background: #F3F3F3;
@@ -579,6 +604,12 @@ footer {
       .slider .item-slid .slid-img img {
         max-width: 100%;
         height: 100%; }
+        @media (max-width: 576px) {
+          .slider .item-slid .slid-img img {
+            max-width: 80%;
+            height: 80%;
+            position: relative;
+            top: 20px; } }
 
 .main-nav {
   position: relative; }
@@ -587,6 +618,9 @@ footer {
     position: absolute;
     top: -10%;
     z-index: -1; }
+    @media (max-width: 990px) {
+      .main-nav::before {
+        content: ""; } }
   .main-nav .main-nav-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -842,6 +876,235 @@ footer {
       @media (max-width: 990px) {
         .vebinar .vebinar-container .vebinar-box .vebinar-info .link-vebinar {
           font-size: 1rem; } }
+
+.katalog {
+  position: relative; }
+  .katalog::before {
+    content: url(../img/listik.png);
+    position: absolute;
+    top: 150px;
+    left: -25px; }
+    @media (max-width: 990px) {
+      .katalog::before {
+        display: none; } }
+  .katalog::after {
+    content: url(../img/contur.png);
+    position: absolute;
+    right: 0;
+    top: 0px;
+    z-index: -1; }
+    @media (max-width: 990px) {
+      .katalog::after {
+        display: none; } }
+  .katalog .title-product {
+    margin-right: 5px;
+    font-family: "Museo-medium";
+    display: block; }
+    @media (max-width: 990px) {
+      .katalog .title-product {
+        margin-bottom: 15px;
+        color: #59956A;
+        font-size: 1rem; } }
+  .katalog .mob-filt {
+    display: none; }
+    @media (max-width: 990px) {
+      .katalog .mob-filt {
+        display: block;
+        margin-bottom: 10px; } }
+  .katalog .katalog-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; }
+    @media (max-width: 990px) {
+      .katalog .katalog-container {
+        grid-template-columns: auto; } }
+    .katalog .katalog-container .katalog-nav {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      @media (max-width: 1024px) {
+        .katalog .katalog-container .katalog-nav {
+          margin-right: 20px; } }
+      @media (max-width: 990px) {
+        .katalog .katalog-container .katalog-nav {
+          margin-right: 0;
+          margin-bottom: 5px; } }
+      .katalog .katalog-container .katalog-nav .mob-katalog {
+        display: block;
+        font-size: 1rem;
+        color: #150A01;
+        padding: 7px 15px 7px 40px;
+        border: 1px solid rgba(206, 179, 136, 0.3);
+        border-radius: 10px;
+        font-family: "Museo-regular";
+        position: relative;
+        display: none; }
+        @media (max-width: 990px) {
+          .katalog .katalog-container .katalog-nav .mob-katalog {
+            display: block;
+            margin-bottom: 15px; } }
+        .katalog .katalog-container .katalog-nav .mob-katalog::before {
+          content: url(../img/icon/drop-set.svg);
+          position: absolute;
+          left: 10px; }
+      @media (max-width: 990px) {
+        .katalog .katalog-container .katalog-nav .katalog-link {
+          display: none; } }
+      .katalog .katalog-container .katalog-nav .katalog-link a {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        font-family: "Museo-medium";
+        color: #000;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+        @media (max-width: 990px) {
+          .katalog .katalog-container .katalog-nav .katalog-link a {
+            font-size: .87rem;
+            margin-bottom: 10px;
+            font-family: "Museo-regular"; } }
+        .katalog .katalog-container .katalog-nav .katalog-link a:hover {
+          color: #59956A;
+          text-decoration: underline; }
+      .katalog .katalog-container .katalog-nav .katalog-link .drop-katalog::after {
+        content: url(../img/icon/drop.svg);
+        position: relative;
+        left: 15px;
+        top: 7px; }
+    .katalog .katalog-container .katalog-product .sort {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: .9rem;
+      margin-bottom: 15px;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+      @media (max-width: 990px) {
+        .katalog .katalog-container .katalog-product .sort {
+          display: none; } }
+      .katalog .katalog-container .katalog-product .sort .sort-disabled {
+        margin: 0 5px;
+        font-family: "Museo-regular";
+        color: rgba(0, 0, 0, 0.5);
+        -webkit-text-decoration-line: underline;
+                text-decoration-line: underline;
+        display: block; }
+        @media (max-width: 990px) {
+          .katalog .katalog-container .katalog-product .sort .sort-disabled {
+            margin-bottom: 10px;
+            color: #150A01;
+            margin-left: 0;
+            font-size: .9rem;
+            text-transform: capitalize;
+            text-decoration: none; } }
+      .katalog .katalog-container .katalog-product .sort .sort-active {
+        color: #59956A;
+        font-family: "Museo-medium"; }
+    .katalog .katalog-container .katalog-product .katalog-product-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto; }
+      @media (max-width: 990px) {
+        .katalog .katalog-container .katalog-product .katalog-product-container {
+          grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 768px) {
+        .katalog .katalog-container .katalog-product .katalog-product-container {
+          grid-template-columns: 1fr; } }
+      .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box {
+        padding: 15px 30px;
+        background: #fff; }
+        @media (max-width: 990px) {
+          .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box {
+            padding: 10px 20px; } }
+      .katalog .katalog-container .katalog-product .katalog-product-container .hover-button {
+        padding: 16px 30px;
+        color: #fff;
+        background: -o-linear-gradient(166.6deg, #59956A 0%, #70B183 100%);
+        background: linear-gradient(283.4deg, #59956A 0%, #70B183 100%);
+        -webkit-box-shadow: 0px 4px 7px rgba(68, 86, 73, 0.2);
+                box-shadow: 0px 4px 7px rgba(68, 86, 73, 0.2);
+        border-radius: 10px;
+        display: block;
+        text-align: center;
+        font-family: "Museo-medium";
+        font-size: 1rem;
+        margin: 10px 0;
+        display: none;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+        @media (max-width: 990px) {
+          .katalog .katalog-container .katalog-product .katalog-product-container .hover-button {
+            display: block;
+            padding: 10 20px;
+            font-size: .87rem; } }
+      .katalog .katalog-container .katalog-product .katalog-product-container .star-box {
+        display: none; }
+        @media (max-width: 990px) {
+          .katalog .katalog-container .katalog-product .katalog-product-container .star-box {
+            position: relative;
+            right: -10px; } }
+        @media (max-width: 990px) {
+          .katalog .katalog-container .katalog-product .katalog-product-container .star-box img {
+            width: 15%; } }
+      .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box {
+        border: 1px solid rgba(206, 179, 136, 0.3);
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+        .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box:hover {
+          -webkit-transition: .3s;
+          -o-transition: .3s;
+          transition: .3s; }
+          .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box:hover .hover-button {
+            display: block; }
+          .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box:hover .star-box {
+            display: block; }
+        .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box .price-block {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box .price-block .price {
+            font-size: 1.1rem;
+            font-family: "Museo-medium"; }
+            @media (max-width: 990px) {
+              .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box .price-block .price {
+                font-size: 1rem; } }
+        .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box .product-img {
+          margin: 0 auto;
+          margin-bottom: 10px;
+          border-bottom: 1px solid rgba(206, 179, 136, 0.6);
+          text-align: center; }
+          @media (max-width: 990px) {
+            .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box .product-img {
+              margin-bottom: 5px; } }
+          .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box .product-img img {
+            max-width: 100%;
+            text-align: center; }
+        .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box .product-info p {
+          text-align: center;
+          font-size: 1rem;
+          font-family: "Museo-regular"; }
+          @media (max-width: 990px) {
+            .katalog .katalog-container .katalog-product .katalog-product-container .katalog-product-box .product-info p {
+              font-size: .87rem; } }
 
 .container {
   max-width: 1180px;

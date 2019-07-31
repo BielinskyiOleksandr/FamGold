@@ -1,0 +1,234 @@
+.katalog {
+    position: relative;
+    &::before {
+        content: url(../img/listik.png);
+        position: absolute;
+        top: 150px;
+        left: -25px;
+        @media (max-width: 990px) {
+            display: none;
+        }
+    }
+    &::after {
+        content: url(../img/contur.png);
+        position: absolute;
+        right: 0;
+        top: 0px;
+        z-index: -1;
+        @media (max-width: 990px) {
+            display: none;
+        }
+    }
+    .title-product {
+        margin-right: 5px;
+        font-family: "Museo-medium";
+        display: block;
+        @media (max-width: 990px) {
+            margin-bottom: 15px;
+            color: #59956A;
+            font-size: 1rem;
+        }
+    }
+    .mob-filt {
+        display: none;
+        @media (max-width: 990px) {
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+    .katalog-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        @media (max-width: 990px) {
+            grid-template-columns: auto;  
+        }
+        .katalog-nav {
+            display: flex;
+            flex-direction: column;
+            @media (max-width: 1024px) {
+                margin-right: 20px;
+            }
+            @media (max-width: 990px) {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+            .mob-katalog {
+                display: block;
+                font-size: 1rem;
+                color: #150A01;
+                padding: 7px 15px 7px 40px;
+                border: 1px solid rgba(206, 179, 136, .3);
+                border-radius: 10px;
+                font-family: "Museo-regular";
+                position: relative;
+                display: none;
+                @media (max-width: 990px) {
+                    display: block;
+                    margin-bottom: 15px;
+                }
+                &::before {
+                    content: url(../img/icon/drop-set.svg);
+                    position: absolute;
+                    left: 10px;
+                }
+            }
+            .katalog-link {
+                @media (max-width: 990px) {
+                    display: none;
+                }
+                a {
+                    display: block;
+                    margin-bottom: 10px;
+                    font-size: 1rem;
+                    font-family: "Museo-medium";
+                    color: #000;
+                    transition: .3s;
+                    @media (max-width: 990px) {
+                        font-size: .87rem;
+                        margin-bottom: 10px;
+                        font-family: "Museo-regular";
+                    }
+                    &:hover {
+                        color: #59956A;
+                        text-decoration: underline;
+                    }
+                }
+                .drop-katalog {
+                    &::after {
+                        content: url(../img/icon/drop.svg);
+                        position: relative;
+                        left: 15px;
+                        top: 7px;
+                    }
+                }
+            }
+        }
+        .katalog-product {
+            .sort {
+                display: flex;
+                font-size: .9rem;
+                margin-bottom: 15px;
+                flex-wrap: wrap;
+                @media (max-width: 990px) {
+                    display: none;
+                }
+                .sort-disabled {
+                    margin: 0 5px;
+                    font-family: "Museo-regular";
+                    color: rgba(0, 0, 0, .5);
+                    text-decoration-line: underline;
+                    display: block;
+                    @media (max-width: 990px) {
+                        margin-bottom: 10px;
+                        color: #150A01;
+                        margin-left: 0;
+                        font-size: .9rem;
+                        text-transform: capitalize;
+                        text-decoration: none;
+                    }
+                }
+                .sort-active {
+                    color: #59956A;
+                    font-family: "Museo-medium";
+                }
+            }
+            .katalog-product-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                @media (max-width: 990px) {
+                    grid-template-columns: 1fr 1fr;
+                }
+                @media (max-width: 768px) {
+                    grid-template-columns: 1fr;
+                }
+                .katalog-product-box {
+                    padding: 15px 30px;
+                    @media (max-width: 990px) {
+                        padding: 10px 20px;
+                    }
+                    background: #fff;
+                }
+                .hover-button {
+                    padding: 16px 30px;
+                    color: #fff;
+                    background: linear-gradient(283.4deg, #59956A 0%, #70B183 100%);
+                    box-shadow: 0px 4px 7px rgba(68, 86, 73, .2);
+                    border-radius: 10px;
+                    display: block;
+                    text-align: center;
+                    font-family: "Museo-medium";
+                    font-size: 1rem;
+                    margin: 10px 0;
+                    display: none;
+                    transition: .3s;
+                    @media (max-width: 990px) {
+                        display: block;
+                        padding: 10 20px;
+                        font-size: .87rem;
+                    }
+                }
+                .star-box {
+                    display: none;
+                    @media (max-width: 990px) {
+                        position: relative;
+                        right: -10px;
+                    }
+                    img {
+                        @media (max-width: 990px) {
+                            width: 15%;
+                        }
+                    }
+                }
+                .katalog-product-box {
+                    border: 1px solid rgba(206, 179, 136, .3);
+                    transition: .3s;
+                    &:hover {
+                        transition: .3s;
+                        .hover-button {
+                            display: block;
+                        }
+                        .star-box {
+                            display: block;
+                        }
+                    }
+                    .price-block {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .price {
+                            font-size: 1.1rem;
+                            font-family: "Museo-medium";
+                            @media (max-width: 990px) {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                    .product-img {
+                        margin: 0 auto;
+                        margin-bottom: 10px;
+                        border-bottom: 1px solid rgba(206, 179, 136, .6);
+                        text-align: center;
+                        @media (max-width: 990px) {
+                            margin-bottom: 5px;
+                        }
+                        img {
+                            max-width: 100%;
+                            text-align: center;
+                        }
+                    }
+                    .product-info {
+                        p {
+                            text-align: center;
+                            font-size: 1rem;
+                            font-family: "Museo-regular";
+                            @media (max-width: 990px) {
+                                font-size: .87rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

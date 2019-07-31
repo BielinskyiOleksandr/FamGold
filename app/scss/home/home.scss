@@ -81,6 +81,12 @@
             img {
                 max-width: 100%;
                 height: 100%;
+                @media (max-width: 576px) {
+                    max-width: 80%;
+                    height: 80%;
+                    position: relative;
+                    top: 20px;
+                }
             }
         }
     }
@@ -93,6 +99,9 @@
         position: absolute;
         top: -10%;
         z-index: -1;
+        @media (max-width: 990px) {
+            content: "";
+        }
     }
     .main-nav-container {
         display: grid;

@@ -27,13 +27,13 @@
     opacity: 0.5;
     cursor: default; }
 
-.owl-theme .owl-nav.disabled + .owl-dots {
+.slider .owl-theme .owl-nav.disabled + .owl-dots {
   margin-top: -10px; 
 position: relative;
 top: -25px;}
 
 @media (max-width: 768px) {
-  .owl-theme .owl-nav.disabled + .owl-dots {
+  .slider .owl-theme .owl-nav.disabled + .owl-dots {
     display: none;}
 }
 
