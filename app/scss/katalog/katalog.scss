@@ -1,57 +1,71 @@
 .katalog {
     position: relative;
+
     &::before {
         content: url(../img/listik.png);
         position: absolute;
         top: 150px;
         left: -25px;
+
         @media (max-width: 990px) {
             display: none;
         }
     }
+
     &::after {
         content: url(../img/contur.png);
         position: absolute;
         right: 0;
         top: 0px;
         z-index: -1;
+
         @media (max-width: 990px) {
             display: none;
         }
     }
+
     .title-product {
         margin-right: 5px;
         font-family: "Museo-medium";
         display: block;
+
         @media (max-width: 990px) {
             margin-bottom: 15px;
             color: #59956A;
             font-size: 1rem;
         }
     }
+
     .mob-filt {
         display: none;
+
         @media (max-width: 990px) {
             display: block;
             margin-bottom: 10px;
         }
     }
+
     .katalog-container {
         display: grid;
         grid-template-columns: 1fr 3fr;
+
         @media (max-width: 990px) {
-            grid-template-columns: auto;  
+            grid-template-columns: auto;
         }
+
         .katalog-nav {
             display: flex;
             flex-direction: column;
+
             @media (max-width: 1024px) {
                 margin-right: 20px;
             }
+
             @media (max-width: 990px) {
                 margin-right: 0;
                 margin-bottom: 5px;
             }
+
             .mob-katalog {
                 display: block;
                 font-size: 1rem;
@@ -62,20 +76,24 @@
                 font-family: "Museo-regular";
                 position: relative;
                 display: none;
+
                 @media (max-width: 990px) {
                     display: block;
                     margin-bottom: 15px;
                 }
+
                 &::before {
                     content: url(../img/icon/drop-set.svg);
                     position: absolute;
                     left: 10px;
                 }
             }
+
             .katalog-link {
                 @media (max-width: 990px) {
                     display: none;
                 }
+
                 a {
                     display: block;
                     margin-bottom: 10px;
@@ -83,16 +101,19 @@
                     font-family: "Museo-medium";
                     color: #000;
                     transition: .3s;
+
                     @media (max-width: 990px) {
                         font-size: .87rem;
                         margin-bottom: 10px;
                         font-family: "Museo-regular";
                     }
+
                     &:hover {
                         color: #59956A;
                         text-decoration: underline;
                     }
                 }
+
                 .drop-katalog {
                     &::after {
                         content: url(../img/icon/drop.svg);
@@ -103,21 +124,25 @@
                 }
             }
         }
+
         .katalog-product {
             .sort {
                 display: flex;
                 font-size: .9rem;
                 margin-bottom: 15px;
                 flex-wrap: wrap;
+
                 @media (max-width: 990px) {
                     display: none;
                 }
+
                 .sort-disabled {
                     margin: 0 5px;
                     font-family: "Museo-regular";
                     color: rgba(0, 0, 0, .5);
                     text-decoration-line: underline;
                     display: block;
+
                     @media (max-width: 990px) {
                         margin-bottom: 10px;
                         color: #150A01;
@@ -127,107 +152,489 @@
                         text-decoration: none;
                     }
                 }
+
                 .sort-active {
                     color: #59956A;
                     font-family: "Museo-medium";
                 }
             }
-            .katalog-product-container {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: auto;
+        }
+    }
+}
+
+
+.katalog-product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    @media (max-width: 990px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.katalog-product-box {
+    border: 1px solid rgba(206, 179, 136, .3);
+    transition: .3s;
+    padding: 15px 30px;
+
+    @media (max-width: 990px) {
+        padding: 10px 20px;
+    }
+
+    background: #fff;
+
+    &:hover {
+        transition: .3s;
+
+        .hover-button {
+            display: block;
+        }
+
+        .star-box {
+            display: block;
+        }
+    }
+
+    .price-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .price {
+            font-size: 1.1rem;
+            font-family: "Museo-medium";
+
+            @media (max-width: 990px) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .product-img {
+        margin: 0 auto;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(206, 179, 136, .6);
+        text-align: center;
+
+        @media (max-width: 990px) {
+            margin-bottom: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    .product-info {
+        p {
+            text-align: center;
+            font-size: 1rem;
+            font-family: "Museo-regular";
+
+            @media (max-width: 990px) {
+                font-size: .87rem;
+            }
+        }
+    }
+
+    .hover-button {
+        padding: 16px 30px;
+        color: #fff;
+        background: linear-gradient(283.4deg, #59956A 0%, #70B183 100%);
+        box-shadow: 0px 4px 7px rgba(68, 86, 73, .2);
+        border-radius: 10px;
+        display: block;
+        text-align: center;
+        font-family: "Museo-medium";
+        font-size: 1rem;
+        margin: 10px 0;
+        display: none;
+        transition: .3s;
+
+        @media (max-width: 990px) {
+            display: block;
+            padding: 10 20px;
+            font-size: .87rem;
+        }
+    }
+
+    .star-box {
+        display: none;
+
+        @media (max-width: 990px) {
+            position: relative;
+            right: -10px;
+        }
+
+        img {
+            @media (max-width: 990px) {
+                width: 15%;
+            }
+        }
+    }
+}
+
+
+.item-slider {
+    padding: 0 50px;
+    @media (max-width: 990px) {
+        padding: 0 25px;
+    }
+    .katalog-product-box {
+        border: 1px solid rgba(206, 179, 136, .3);
+        transition: .3s;
+        padding: 15px 30px;
+    
+        @media (max-width: 990px) {
+            padding: 10px 20px;
+        }
+    
+        background: #fff;
+    
+        .price-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .price {
+                font-size: 1.1rem;
+                font-family: "Museo-medium";
+    
                 @media (max-width: 990px) {
-                    grid-template-columns: 1fr 1fr;
-                }
-                @media (max-width: 768px) {
-                    grid-template-columns: 1fr;
-                }
-                .katalog-product-box {
-                    padding: 15px 30px;
-                    @media (max-width: 990px) {
-                        padding: 10px 20px;
-                    }
-                    background: #fff;
-                }
-                .hover-button {
-                    padding: 16px 30px;
-                    color: #fff;
-                    background: linear-gradient(283.4deg, #59956A 0%, #70B183 100%);
-                    box-shadow: 0px 4px 7px rgba(68, 86, 73, .2);
-                    border-radius: 10px;
-                    display: block;
-                    text-align: center;
-                    font-family: "Museo-medium";
                     font-size: 1rem;
-                    margin: 10px 0;
-                    display: none;
-                    transition: .3s;
+                }
+            }
+        }
+    
+        .product-img {
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(206, 179, 136, .6);
+            text-align: center;
+    
+            @media (max-width: 990px) {
+                margin-bottom: 5px;
+            }
+    
+            img {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+    
+        .product-info {
+            p {
+                text-align: center;
+                font-size: 1rem;
+                font-family: "Museo-regular";
+    
+                @media (max-width: 990px) {
+                    font-size: .87rem;
+                }
+            }
+        }
+    
+        .hover-button {
+            padding: 16px 30px;
+            color: #fff;
+            background: linear-gradient(283.4deg, #59956A 0%, #70B183 100%);
+            box-shadow: 0px 4px 7px rgba(68, 86, 73, .2);
+            border-radius: 10px;
+            display: block;
+            text-align: center;
+            font-family: "Museo-medium";
+            font-size: 1rem;
+            margin: 10px 0;
+            display: block;
+            transition: .3s;
+    
+            @media (max-width: 990px) {
+                display: block;
+                padding: 10 20px;
+                font-size: .87rem;
+            }
+        }
+    
+        .star-box {
+            display: flex;
+            @media (max-width: 990px) {
+                position: relative;
+                right: -10px;
+            }
+    
+            img {
+                @media (max-width: 990px) {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+
+// табы
+.item-tabs {
+    .item-tabs-container {
+        .tabs-link {
+            display: flex;
+            margin-bottom: 20px;
+            @media (max-width: 990px) {
+                flex-direction: column;
+            }
+            li {
+                padding: 10px 20px;
+                color: $colortext;
+                opacity: .7;
+                font-family: "Museo-regular";
+                cursor: pointer;
+                border-bottom: 1.5px solid #F6F6F6;
+                transition: .3s;
+                display: block;
+            }
+            li:first-child {
+                @media (max-width:990px) {
+                    padding-top: 0;
+                }
+            }
+            .active-tab {
+                color: #59956A;
+                border-bottom: 1px solid #59956A;
+                font-family: "Museo-medium";
+                opacity: 1;
+            }
+        }
+        .tabs-content {
+            display: none;
+        }
+        .tabs-content-active {
+            display: block;
+        }
+        .tabs-text-container {
+            padding: 20px;
+            @media (max-width: 990px) {
+                padding: 0 10px;
+            }
+            .tabs-text {
+                font-size: 1.1rem;
+                font-family: "Museo-regular";
+                max-width: 725px;
+                line-height: 1.7;
+                @media (max-width: 990px) {
+                    font-size: .87rem;
+                    max-width: none;
+                    line-height: 1;
+                }
+            }
+            .composition-list {
+                li {
+                    font-size: 1.1rem;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+.comments-container {
+    padding: 20px 10px;
+    @media (max-width: 990px) {
+        padding: 20px 0;
+    }
+    .comments-block {
+        padding: 30px;
+        background: #FFFAF1;
+        border-radius: 10px;
+        display: block;
+        font-size: 1rem;
+        font-family: "Museo-regular";
+        position: relative;
+        @media (max-width: 990px) {
+            font-size: .87rem;
+            padding: 20px;
+        }
+        &::before {
+            content: url(../img/icon/kaviska.svg);
+            position: absolute;
+            top: -20px;
+            left: 20px;
+        }
+        &::after {
+            content: url(../img/icon/kaviska.svg);
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+        }
+        .text-comments {
+            margin-bottom: 15px;
+            a {
+                display: inline-block;
+                color: #59956A;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+//Страница товара
+
+.item-product {
+    position: relative;
+    &::before {
+        content: url(../img/countor.svg);
+        position: absolute;
+        right: 0;
+        top: 0;
+        @media (max-width: 990px) {
+            display: none;
+        }
+    }
+    .title-xl {
+        @media (max-width: 990px) {
+            font-size: 1.75rem;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    .item-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        position: relative;
+        @media (max-width: 990px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+        .item-img {
+            @media (max-width: 990px) {
+                text-align: center;
+                display: block;
+                justify-content: center;
+                align-items: center;
+            }
+
+            img {
+                @media (max-width: 990px) {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .item-info {
+            margin-top: 40px;
+
+            @media (max-width: 990px) {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+
+            .price-item {
+                font-size: 2rem;
+                color: #150A01;
+                font-family: "Museo-bold";
+                margin-bottom: 20px;
+            }
+
+            .star-item {
+                margin-bottom: 20px;
+
+                span {
+                    margin: 0 2px;
+                }
+            }
+
+            .weight-item {
+                margin-bottom: 20px;
+
+                .weight-title {
+                    color: #CEB388;
+                    font-family: "Museo-medium";
+                    font-size: 1.1rem;
+                    margin-bottom: 10px;
+
                     @media (max-width: 990px) {
-                        display: block;
-                        padding: 10 20px;
-                        font-size: .87rem;
+                        font-size: 1rem;
                     }
                 }
-                .star-box {
-                    display: none;
+
+                .weight-num {
+                    font-size: 1.1rem;
+                    font-family: "Museo-regular";
+
                     @media (max-width: 990px) {
-                        position: relative;
-                        right: -10px;
-                    }
-                    img {
-                        @media (max-width: 990px) {
-                            width: 15%;
-                        }
+                        font-size: 1rem;
                     }
                 }
-                .katalog-product-box {
-                    border: 1px solid rgba(206, 179, 136, .3);
-                    transition: .3s;
-                    &:hover {
-                        transition: .3s;
-                        .hover-button {
-                            display: block;
-                        }
-                        .star-box {
-                            display: block;
-                        }
-                    }
-                    .price-block {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        .price {
-                            font-size: 1.1rem;
-                            font-family: "Museo-medium";
-                            @media (max-width: 990px) {
-                                font-size: 1rem;
-                            }
-                        }
-                    }
-                    .product-img {
-                        margin: 0 auto;
-                        margin-bottom: 10px;
-                        border-bottom: 1px solid rgba(206, 179, 136, .6);
-                        text-align: center;
-                        @media (max-width: 990px) {
-                            margin-bottom: 5px;
-                        }
-                        img {
-                            max-width: 100%;
-                            text-align: center;
-                        }
-                    }
-                    .product-info {
-                        p {
-                            text-align: center;
-                            font-size: 1rem;
-                            font-family: "Museo-regular";
-                            @media (max-width: 990px) {
-                                font-size: .87rem;
-                            }
-                        }
-                    }
+            }
+
+            .button-item {
+                color: #fff;
+                padding: 15px 30px;
+                background: linear-gradient(285.99deg, #59956A 0%, #70B183 100%);
+                border-radius: 10px;
+                font-family: "Museo-regular";
+                font-size: 1.1rem;
+                display: inline-block;
+
+                @media (max-width: 990px) {
+                    font-size: .9rem;
+                    padding: 12px 5px;
                 }
+
+                @media (max-width: 450px) {
+                    display: block;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+.composition-item-title {
+    color: #CEB388;
+    font-family: "Museo-medium";
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+
+    @media (max-width: 990px) {
+        font-size: 1rem;
+    }
+}
+
+.composition-list {
+    padding-left: 20px;
+    margin-bottom: 30px;
+
+    @media (max-width: 990px) {
+        margin-bottom: 20px;
+    }
+
+    li {
+        list-style-type: disc;
+        color: #CEB388;
+        margin-bottom: 10px;
+
+        span {
+            color: #000;
+            font-size: 1.1rem;
+            font-family: "Museo-regular";
+
+            @media (max-width: 990px) {
+                font-size: 1rem;
             }
         }
     }

@@ -1,5 +1,6 @@
 header {
     margin-bottom: 20px;
+    position: relative;
     .header-container {
         .button-shot-mob {
             display: none;
@@ -65,7 +66,7 @@ header {
                     grid-template-columns: 1fr 5fr; 
                 }
                 .logotype-header{
-                    @media (max-width: 576px) {
+                    @media (max-width: 990px) {
                         height: 50px;
                         display: none;
                     }
@@ -79,14 +80,15 @@ header {
                         font-family: "Museo-regular";
                         margin-bottom: 5px;
                         text-transform: uppercase;
-                        @media (max-width: 576px) {
+                        @media (max-width: 990px) {
                             display: none;
                         }
                     }
                     .info-en {
                         font-size: .87rem;
                         font-family: "Oxygen-bold";
-                        @media (max-width: 576px) {
+                        text-transform: uppercase;
+                        @media (max-width: 990px) {
                             display: none;  
                         }
                     }
@@ -102,7 +104,8 @@ header {
                 p {
                     font-size: 1.125rem;
                     color: $colortext;
-                    font-family: "Museo-light";
+                    font-family: "Museo-medium";
+                    color: #CEB388;
                 }
             }
             .header-info-feedback {
@@ -145,6 +148,25 @@ header {
             @media (max-width: 990px) {
                 display: flex;
                 flex-direction: column;
+                justify-content: space-around;
+                position: absolute;
+                top: 0;
+                height: 100vh;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #fff;
+                z-index: 999;
+            }
+            .close {
+                display: none;
+                @media (max-width: 990px) {
+                    display: block;
+                    right: 30px;
+                    top: 20px;
+                    position: absolute;
+                    z-index: 9999;
+                }
             }
             .box-social {
                 display: none;
@@ -157,6 +179,9 @@ header {
                     margin: 0 6px;
                     img {
                         transition: .3s;
+                        @media (max-width: 990px) {
+                            height: 35px;
+                        }
                         &:hover {
                             transform: scale(1.2);
                         }
@@ -172,22 +197,47 @@ header {
                         display: block;
                         position: absolute;
                         right: 0;
+                        z-index: 1;
+                    }
+                }
+                &::after {
+                    display: none;
+                    @media (max-width: 990px) {
+                        content: url(../img/list-menu.png);
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        bottom: -10%;
+                        z-index: 1;
+                    }
+                    @media (max-width: 320px) {
+                        bottom: -30%;
                     }
                 }
                 ul {
                     display: flex;
                     @media (max-width: 990px) {
                         flex-direction: column;
-                        text-align: center;
-                        margin-bottom: 15px;
+                        text-align: right;
+                        margin-right: 30px;
+                        margin-top: 60px;
+                        position: relative;
+                        z-index: 3;                 
+                    }
+                    @media (max-width: 360px) {
+                        margin-top: 50px;
                     }
                     li {
                         padding: 10px 14px;
                         @media (max-width: 990px) {
                             padding: 15px 5px;
+                            margin-bottom: 10px;
                         }
                         @media (max-width: 576px) {
                             padding: 10px 5px;
+                        }
+                        @media (max-width: 320px) {
+                            margin-bottom: 0;
                         }
                         a {
                             font-size: 1.1rem;
@@ -195,7 +245,7 @@ header {
                             color: $colortext;
                             transition: .3s;
                             @media (max-width: 576px) {
-                                font-size: 1rem;
+                                font-size: 1.1rem;
                             }
                             &:hover {
                                 text-decoration: underline;
@@ -245,12 +295,18 @@ header {
 }
 
 
+.body-hid {
+    overflow: hidden;
+}
+
 .hidden {
     position: absolute;
 }
+
 .hidden {
     transform: translateY(-370px);
 }
+
 .fixed {
     position: fixed;
     transform: translateY(0);

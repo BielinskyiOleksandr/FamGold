@@ -153,3 +153,20 @@ footer {
         }
     }
 }
+
+.up {
+    color: #CEB388;
+    font-family: "Museo-regular";
+    font-size: 1.1rem;
+    margin-top: 20px;
+    display: block;
+    &::after {
+        content: url(../img/icon/up.svg);
+        position: relative;
+        top: 10px;
+        left: 10px;
+    }
+    @media (max-width: 990px) {
+        margin-top: 10px;
+    }
+}

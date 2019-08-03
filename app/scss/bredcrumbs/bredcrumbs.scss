@@ -2,6 +2,9 @@
     position: relative;
     ul {
         display: flex;
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+        }
         li {
             display: block;
             a {
@@ -13,9 +16,10 @@
                     margin: 0 5px;
                 }
             }
-        }  
+        } 
         li:last-child {
             a {
+                opacity: .7;
                 &::after {
                     content: '';
                 }

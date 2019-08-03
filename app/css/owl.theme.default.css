@@ -27,6 +27,7 @@
     opacity: 0.5;
     cursor: default; }
 
+
 .slider .owl-theme .owl-nav.disabled + .owl-dots {
   margin-top: -10px; 
 position: relative;
@@ -34,7 +35,9 @@ top: -25px;}
 
 @media (max-width: 768px) {
   .slider .owl-theme .owl-nav.disabled + .owl-dots {
-    display: none;}
+    top: 30px;
+    margin-top: 0;
+    }
 }
 
 .owl-theme .owl-dots {
@@ -53,5 +56,59 @@ top: -25px;}
       -webkit-backface-visibility: visible;
       transition: opacity 200ms ease;
       border-radius: 30px; }
-    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-      background: #869791; }
+
+      .slider .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+        background: #CEB388; }
+
+      .item-slider .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+        background: #CEB388; }
+
+        .item-slider .owl-dots {
+          margin-top: 30px;
+        }
+
+        .tabs-text-container .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+          background: #CEB388; }
+  
+          .tabs-text-container .owl-dots {
+            margin-top: 30px;
+          }
+
+          @media (max-width: 990px) {
+            .tabs-text-container .owl-dots {
+              margin-top: 10px;
+            }
+          }
+
+          .tabs-text-container .owl-nav {
+            display: none;
+          }
+
+
+        .item-slider .owl-theme .owl-nav {
+          display: flex;
+          justify-content: space-between;
+          display: none;
+      }
+
+      .item-slider .owl-prev span{
+        opacity: 0;
+      }
+
+      .item-slider .owl-next span{
+        opacity: 0;
+      }
+
+      .item-slider .owl-prev::before{
+        content: url(../img/icon/lef-sld.svg);
+      }
+
+      .item-slider .owl-next::before{
+        content: url(../img/icon/right-sl.svg);
+      }
+
+      .owl-theme .owl-nav [class*='owl-']:hover {
+        background: transparent;
+        color: #FFF;
+        text-decoration: none;
+    }
