@@ -104,7 +104,6 @@ $(document).ready(function () {
                 navFixed.addClass("fixed");
                 navFixed.removeClass("nofixed");
             }
-
         });
     }
 
@@ -114,5 +113,12 @@ $(document).ready(function () {
             .addClass('active-tab').siblings().removeClass('active-tab')
             .closest('div.item-tabs-container').find('div.tabs-content').removeClass('tabs-content-active').eq($(this).index()).addClass('tabs-content-active');
     });
+
+    $('ul.map-ul').on('click', 'li:not(.active)', function(e) {
+        e.preventDefault();
+        $(this)
+          .addClass('map-li-active').siblings().removeClass('map-li-active')
+          .closest('div.contact-tab-map-container').find('div.map-content-disabled').removeClass('map-content-active').eq($(this).index()).addClass('map-content-active');
+    });    
 
 });

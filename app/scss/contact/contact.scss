@@ -1,0 +1,398 @@
+.contact {
+    position: relative;
+
+    &::after {
+        content: url(../img/contact-list.png);
+        position: absolute;
+        right: 0;
+        top: 15%;
+        z-index: -2;
+    }
+
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media (max-width: 990px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            margin-bottom: 40px;
+        }
+
+        .contact-feedback {
+            position: relative;
+            background: linear-gradient(148.75deg, #FFFAF1 1.67%, rgba(255, 255, 255, .56) 95.94%);
+            border-radius: 0 10px 10px 0;
+            margin-right: 25px;
+
+            @media (max-width: 990px) {
+                margin-right: 0;
+                border-radius: 0;
+                padding: 20px 0;
+            }
+
+            &::before {
+                content: '';
+                background: linear-gradient(148.75deg, #FFFAF1 1.67%, rgba(255, 255, 255, .56) 95.94%);
+                display: block;
+                position: absolute;
+                height: 100%;
+                left: -100%;
+                width: 100%;
+                top: 0;
+            }
+
+            &::after {
+                display: none;
+
+                @media (max-width: 990px) {
+                    content: '';
+                    background: linear-gradient(148.75deg, #FFFAF1 1.67%, rgba(255, 255, 255, .56) 95.94%);
+                    display: block;
+                    position: absolute;
+                    height: 100%;
+                    right: -100%;
+                    width: 100%;
+                    top: 0;
+                }
+            }
+
+            padding: 35px 0;
+
+            .contact-feedback-title {
+                font-size: 1.25rem;
+                font-family: "Museo-medium";
+                margin-bottom: 30px;
+
+                @media (max-width: 576px) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .contact-feedback-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                @media (max-width: 576px) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                }
+
+                .contact-feedback-box {
+                    margin-bottom: 30px;
+
+                    @media (max-width: 576px) {
+                        margin-bottom: 20px;
+                    }
+
+                    img {
+                        margin-bottom: 15px;
+
+                        @media (max-width: 576px) {
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    .feedback-title {
+                        font-size: 1rem;
+                        font-family: "Museo-medium";
+                        margin-bottom: 10px;
+
+                        @media (max-width: 576px) {
+                            font-size: .95rem;
+                        }
+                    }
+
+                    .feedback-text {
+                        font-size: 1rem;
+                        font-family: "Museo-regular";
+
+                        @media (max-width: 990px) {
+                            font-size: .87rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact-maps {
+    .title-sm {
+        font-size: 1.25rem;
+        @media (max-width: 990px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    .contact-tab-map-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @media (max-width: 990px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
+        ul {
+            display: block;
+            list-style-position: inside;
+            -moz-column-count: 2;
+            /* Firefox */
+            -webkit-column-count: 2;
+            /* Safari and Chrome */
+            column-count: 2;
+            list-style-type: decimal;
+            @media (max-width: 990px) {
+                margin-bottom: 30px;
+            }
+            li {
+                font-family: "Museo-regular";
+                color: $colortext;
+                font-size: 1.05rem;
+                margin-bottom: 18px;
+                cursor: pointer;
+
+                @media (max-width: 990px) {
+                    font-size: .9rem;
+                    margin-bottom: 12px;
+                }
+                @media (max-width: 380px) {
+                    font-size: .87rem;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .map-li-active {
+                cursor: pointer;
+                color: #CEB388;
+            }
+        }
+    }
+    .map-content {
+        position: relative;
+        .map-adress-info {
+            display: inline-block;
+            padding: 30px 35px;
+            background: #CEB388;
+            border-radius: 10px;
+            color: #fff;
+            position: absolute;
+            bottom: -20px;
+            left: -50px;
+            @media (max-width: 990px) {
+                padding: 25px;
+                position: relative;
+                bottom: 0;
+                top: -5px;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .title-adress {
+                font-size: 1.125rem;
+                font-family: "Museo-medium";
+                margin-bottom: 20px;
+                @media (max-width: 990px) {
+                    font-size: 1rem;
+                    margin-bottom: 15px;
+                }
+            }
+            .street-adress {
+                font-size: 1rem;
+                font-family: "Museo-medium";
+                margin-bottom: 20px;
+                @media (max-width: 990px) {
+                    font-size: .87rem;
+                    margin-bottom: 15px;
+                }
+            }
+            .map-adress, .phone-adress {
+                font-size: .95rem;
+                margin-bottom: 20px;
+                font-family: "Museo-light";
+                @media (max-width: 990px) {
+                    font-size: .87rem;
+                    margin-bottom: 15px;
+                }
+            }
+            .map-adress {
+                position: relative;
+                padding-left: 20px;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    content: url(../img/icon/map-mini.svg);
+                }
+            }
+            .phone-adress {
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 0;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    content: url(../img/icon/phone-mini.svg);
+                }
+            }
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            @media (max-width: 990px) {
+                height: 350px;
+            }
+        }
+    }
+
+    .map-content-disabled {
+        display: none;
+    }
+
+    .map-content-active {
+        display: block;
+    }
+}
+
+
+.contact-form {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 990px) {
+        justify-content: center;
+    }
+}
+
+.contact-form-wrapper {
+    .politik {
+        font-size: .8rem;
+        font-family: "Museo-light";
+
+        a {
+            text-decoration: underline;
+            color: #000;
+        }
+    }
+
+    .title-xl {
+        margin-bottom: 15px;
+    }
+
+    .contact-form-text {
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+        font-family: "Museo-regular";
+
+        @media (max-width: 990px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .input-box {
+        margin-bottom: 20px;
+
+        @media (max-width: 990px) {
+            margin-bottom: 15px;
+        }
+
+        .input-contact {
+            border: 1px solid rgba(21, 10, 1, .3);
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding: 15px 25px;
+            width: 100%;
+
+            @media (max-width: 990px) {
+                padding: 14px 20px;
+            }
+        }
+
+        .textarea {
+            height: 200px;
+        }
+    }
+
+    .button-wrap-send {
+        margin-bottom: 10px;
+
+        .buttons-send {
+            box-shadow: 0px 4px 7px rgba(68, 86, 73, .2);
+            background: linear-gradient(281.43deg, #59956A 0%, #70B183 100%);
+            border-radius: 10px;
+            color: #fff;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-family: "Museo-regular";
+            outline: none;
+            border: none;
+            cursor: pointer;
+
+            @media (max-width: 990px) {
+                font-size: .87rem;
+                padding: 12px 20px;
+            }
+        }
+    }
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: rgba(21, 10, 1, .6);
+    font-family: "Museo-regular";
+    font-size: 1.05rem;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: rgba(21, 10, 1, .6);
+    font-family: "Museo-regular";
+    font-size: 1.05rem;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: rgba(21, 10, 1, .6);
+    font-family: "Museo-regular";
+    font-size: 1.05rem;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: rgba(21, 10, 1, .6);
+    font-family: "Museo-regular";
+    font-size: 1.05rem;
+}
+
+@media (max-width: 990px) {
+    ::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: rgba(21, 10, 1, .6);
+        font-family: "Museo-regular";
+        font-size: .9rem;
+    }
+
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: rgba(21, 10, 1, .6);
+        font-family: "Museo-regular";
+        font-size: .9rem;
+    }
+
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: rgba(21, 10, 1, .6);
+        font-family: "Museo-regular";
+        font-size: .9rem;
+    }
+
+    :-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: rgba(21, 10, 1, .6);
+        font-family: "Museo-regular";
+        font-size: .9rem;
+    }
+}
+
+textarea {
+    resize: none;
+}
