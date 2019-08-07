@@ -4,6 +4,17 @@ footer {
     @media (max-width: 990px) {
         padding: 30px 0;
     }
+    .confidintional {
+        font-size: .87rem;
+        color: $colortext;
+        font-family: "Museo-regular";
+        white-space: nowrap;
+        margin-top: 20px;
+        text-decoration: underline;
+        @media (max-width: 990px) {
+            margin-top: 10px;
+        }
+    }
     .footer-container {
         display: grid;
         grid-template-columns: 2fr 4fr 3fr 2fr;
@@ -32,6 +43,7 @@ footer {
                 font-size: 1.1rem;
                 color: $colortext;
                 font-family: "Museo-regular";
+                margin-bottom: 15px;
             }
             ul {
                 list-style-position: inside;
@@ -40,7 +52,8 @@ footer {
                 li {
                     padding: 5px 0;
                     a {
-                        font-size: .9rem;
+                        font-size: .95rem;
+                        font-family: "Museo-regular";
                         opacity: .7;
                         color: $colortext;
                         transition: .3s;
@@ -142,7 +155,7 @@ footer {
                 margin-bottom: 25px;
             }
             a {
-                margin: 0 5px;
+                margin: 0 9px;
                 img {
                     transition: .2s;
                     &:hover {

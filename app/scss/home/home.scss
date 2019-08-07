@@ -1,55 +1,68 @@
 .slider {
     background: #F7F7F7;
+
     .container {
-        @media (max-width: 990px){
+        @media (max-width: 990px) {
             padding-right: 0;
         }
     }
+
     .item-slid {
         overflow-x: hidden;
         display: grid;
         grid-template-columns: 2fr 1fr;
+
         @media (max-width: 768px) {
             padding: 30px 0;
         }
+
         .slid-text-box {
             align-self: center;
             color: $colortext;
             position: relative;
+
             .slid-title {
                 font-family: "Lato-bold";
                 font-size: 4rem;
                 margin-bottom: 25px;
+
                 @media (max-width: 990px) {
                     font-size: 3rem;
                 }
+
                 @media (max-width: 768px) {
                     font-size: 1.25rem;
                     margin-bottom: 50px;
                     white-space: nowrap;
                 }
             }
+
             .slid-text {
                 font-family: "Museo-regular";
                 font-size: 1.1rem;
                 margin-bottom: 50px;
+
                 @media (max-width: 990px) {
                     font-size: .87rem;
                     margin-bottom: 25px;
                 }
+
                 @media (max-width: 768px) {
                     display: none;
                 }
             }
+
             .slid-text-mob {
                 display: none;
+
                 @media (max-width: 768px) {
                     display: block;
                     font-family: "Museo-regular";
                     font-size: 1.1rem;
-                    margin-bottom: 10px; 
+                    margin-bottom: 10px;
                 }
             }
+
             .slid-link {
                 box-shadow: 0px 4px 7px rgba(68, 86, 73, .2);
                 background: linear-gradient(281.43deg, #59956A 0%, #70B183 100%);
@@ -58,29 +71,36 @@
                 padding: 15px 35px;
                 font-size: 1.1rem;
                 font-family: "Museo-regular";
+
                 @media (max-width: 990px) {
                     font-size: .87rem;
                     padding: 12px 20px;
                 }
+
                 @media (max-width: 768px) {
                     display: none;
                 }
             }
         }
+
         .slid-img {
             height: 400px;
             position: relative;
+
             @media (max-width: 990px) {
                 height: auto;
             }
+
             @media (max-width: 768px) {
                 height: 200px;
                 width: 200px;
                 right: -5px;
             }
+
             img {
                 max-width: 100%;
                 height: 100%;
+
                 @media (max-width: 576px) {
                     max-width: 80%;
                     height: 80%;
@@ -94,56 +114,128 @@
 
 .main-nav {
     position: relative;
+
     &::before {
         content: url(../img/circle.png);
         position: absolute;
         top: -10%;
         z-index: -1;
+
         @media (max-width: 990px) {
             content: "";
         }
     }
+
     .main-nav-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 255px;
+
         @media (max-width: 990px) {
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(6, auto); 
+            grid-template-rows: repeat(6, auto);
         }
+
         grid-gap: 20px;
+
         .nav-box-xl-1 {
-            grid-column: 1/3; 
+            grid-column: 1/3;
             grid-row: 1/2;
+
             @media (max-width: 990px) {
-                grid-column: 1/1; 
-                grid-row: 1/1; 
+                grid-column: 1/1;
+                grid-row: 1/1;
             }
         }
+
         .nav-box-xl-2 {
-            grid-column: 3/5; 
+            grid-column: 3/5;
             grid-row: 2/2;
             position: relative;
             top: -150px;
+
             @media (max-width: 1100px) {
                 top: -130px;
             }
+
             @media (max-width: 990px) {
                 grid-column: 1/1;
                 grid-row: 6/6;
                 top: 0;
             }
         }
+
         a {
             display: block;
+            position: relative;
+            overflow: hidden;
             @media (max-width: 990px) {
                 text-align: center;
             }
+
+
+            div {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                background-size: cover;
+                transition: .3s ease-out;
+                transform: scale(.99);
+                z-index: 2;
+                opacity: 0;
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+            .img-el1 {
+                background: url('../../img/home/katalog-hover.png') no-repeat center center;
+            }
+            .img-el2 {
+                background: url('../../img/home/company-hover.png') no-repeat center center;
+            }
+            .img-el3 {
+                background: url('../../img/home/business-hover.png') no-repeat center center;
+            }
+            .img-el4 {
+                background: url('../../img/home/news-hover.png') no-repeat center center;
+            }
+            .img-el5 {
+                background: url('../../img/home/sale-hover.png') no-repeat center center;
+            }
+            .img-el6 {
+                background: url('../../img/home/product-hover.png') no-repeat center center;
+            }
+
+            &:hover {
+                div {
+                    opacity: 1;
+                    display: block;
+                    left: 0;
+                    transition: .25s ease-out;
+                    top: 0;
+                    transform: scale(1);
+                }
+                img {
+                    opacity: 0;
+                    max-width: 100%;
+                    display: block;
+                    transition: opacity .1s ease-out;
+
+                    @media (max-width: 990px) {
+                        width: 100%;
+                    }
+                }
+            }
         }
+
         img {
             max-width: 100%;
+            display: block;
             @media (max-width: 990px) {
-                width: 100%;
+               width: 100%;
             }
         }
     }

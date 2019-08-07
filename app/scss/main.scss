@@ -10,6 +10,7 @@
 @import 'vebinar/vebinar';
 @import 'katalog/katalog';
 @import 'contact/contact';
+@import 'product/product';
 
 .container {
 	max-width: 1180px;
@@ -48,6 +49,9 @@ ul {
 	margin: 0;
 }
 
+#wrapper {
+	overflow-x: hidden;
+}
 
 //YATRA
 @font-face {
