@@ -145,6 +145,7 @@
             list-style-type: decimal;
             @media (max-width: 990px) {
                 margin-bottom: 30px;
+                display: none;
             }
             li {
                 font-family: "Museo-regular";
@@ -401,4 +402,23 @@
 
 textarea {
     resize: none;
+}
+
+.counrty-watch {
+    display: none;
+    @media (max-width: 990px) {
+        display: block;
+        font-size: 1rem;
+        border: 1px solid rgba(206, 179, 136, .3);
+        font-family: "Museo-regular";
+        padding: 6px 15px;
+        border-radius: 10px;
+        position: relative;
+        &::after {
+            content: url(../img/icon/drop-down.svg);
+            position: absolute;
+            right: 15px;
+        }
+        margin-bottom: 20px;
+    }
 }

@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    $(".counrty-watch").on("click", function(){
+        $(".contact-tab-map-container ul").slideToggle("fast");
+    });
+
     $(".nav-menu-button, .close").on("click", function () {
         $(".header-menu").toggle(150);
         $("body").toggleClass("body-hid");
