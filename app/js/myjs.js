@@ -144,4 +144,11 @@ $(document).ready(function () {
     	}
     });
 
+    $(".review-container>:not(:eq(0))").hide();
+
+    $(".review-vidos").on("click",function(e){
+        e.preventDefault();
+        $(".review-container>:not(:eq(0))").toggle("fast");
+    });
+
 });
