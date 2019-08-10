@@ -11,6 +11,7 @@
 @import 'katalog/katalog';
 @import 'contact/contact';
 @import 'product/product';
+@import 'company/company';
 
 .container {
 	max-width: 1180px;
@@ -40,7 +41,12 @@ li {
 	list-style-type: none;
 }
 
-h1,h2,h3,h4,h5,p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
 	margin: 0;
 }
 
@@ -53,16 +59,11 @@ ul {
 	overflow-x: hidden;
 }
 
-//YATRA
-@font-face {
-	font-family: "Yatra-regular";
-	src: url("../fonts/yatra/YatraOne-Regular.ttf");
-}
+// CAROLINA
 
-//OXYGEN
 @font-face {
-	font-family: "Oxygen-bold";
-	src: url("../fonts/oxygen/Oxygen-Bold.ttf");
+	font-family: "Carolina";
+	src: url("../fonts/carolina/CAROLINA.TTF");
 }
 
 //LATO
@@ -100,4 +101,61 @@ ul {
 @font-face {
 	font-family: "Museo-light";
 	src: url("../fonts/museo/MuseoSansCyrl.otf");
+}
+
+.owl-theme .owl-nav {
+	margin-top: 10px;
+	display: flex;
+	position: relative;
+	top: -230px;
+	justify-content: space-between;
+	@media (max-width: 1260px) {
+		justify-content: center;
+		top: 0;
+	}
+	@media (max-width: 480px) {
+		display: none;
+	}
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+	font-size: 70px !important;
+	margin: 0;
+	padding: 0;
+	outline: none !important;
+	border: none !important;
+	color: rgba(0, 0, 0, .45) !important;
+	@media (max-width: 1260px) {
+		font-size: 60px !important;
+	}
+}
+
+.owl-prev {
+	position: relative;
+	left: -70px !important;
+	@media (max-width: 1366px) {
+		left: -40px !important;
+	}
+	@media (max-width: 1260px) {
+		    left: -15px !important;
+		    margin-left: 0px !important;
+	}
+}
+
+.owl-next {
+	position: relative;
+	right: -70px;
+	@media (max-width: 1366px) {
+		right: -40px;
+	}
+	@media (max-width: 1260px) {
+		right: -15px;
+	}
+}
+
+.owl-theme .owl-dots {
+	@media (max-width: 990px) {
+		position: relative;
+		top: 32px;
+	}
 }

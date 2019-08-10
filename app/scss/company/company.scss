@@ -1,0 +1,506 @@
+.company-title {
+    font-family: "Carolina";
+    color: #59956A;
+    font-size: 3.75rem;
+    @media (max-width: 990px) {
+        font-size: 1.87rem;
+        margin-bottom: 10px;
+    }
+}
+
+.carolina-title {
+    .carolina-title-text {
+        font-family: "Carolina";
+        color: #59956A;
+        font-size: 5.6rem;
+        letter-spacing: .03em;
+        @media (max-width: 990px) {
+            font-size: 3.65rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            font-size: 2.25rem;
+        }
+    }
+}
+
+.about-company {
+    background: url(../img/company/company-bg-text.png) no-repeat 100% 100%;
+    padding: 65px 0;
+    @media (max-width: 990px) {
+        background: none;
+        padding: 0;
+    }
+    .about-company-text {
+        font-size: 1.125rem;
+        color: $colortext;
+        font-family: "Museo-regular";
+        max-width: 575px;
+        position: relative;
+        @media (max-width: 768px) {
+            font-size: .87rem;
+            max-width: none;
+        }
+    }
+    .picter-company {
+        display: none;
+        @media (max-width: 576px) {
+            display: block;
+            width: 103%;
+            left: -20px;
+            margin-top: 25px;
+        }
+    }
+}
+
+.about-director {
+    position: relative;
+    &::before {
+        content: url(../img/contact-list.png);
+        position: absolute;
+        right: 0;
+        top: -160px;
+        z-index: -1;
+        @media (max-width: 990px) {
+            display: none;
+        }
+    }
+    .about-director-container {
+        position: relative;
+        padding: 0 15px;
+        @media (max-width: 990px) {
+            padding: 0;
+        }
+        .about-director-img {
+            img {
+                max-width: 100%;
+                height: 400px;
+                @media (max-width: 990px) {
+                    height: auto;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .about-director-text {
+            position: absolute;
+            right: 0;
+            top: 40px;
+            z-index: 2;
+            max-width: 750px;
+            padding: 40px 60px;
+            background: #FFFAF1;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, .1);
+            border-radius: 10px;
+            font-family: "Museo-regular";
+            @media (max-width: 990px) {
+                position: relative;
+                max-width: none;
+                padding: 40px 30px;
+                margin-bottom: 30px;
+                top: -10px;
+            }
+            &::before {
+                content: url(../img/icon/company-abzac.svg);
+                position: absolute;
+                right: 10px;
+                bottom: -90px;
+                @media (max-width: 990px) {
+                    display: none;
+                }
+            }
+            &::after {
+                @media (max-width: 990px) {
+                    content: url(../img/company/mod-abzac.svg);
+                    position: absolute;
+                    left: 10px;
+                }
+            }
+            .director-text {
+                font-size: 1.125rem;
+                color: $colortext;
+                margin-bottom: 40px;
+                line-height: 170%;
+                @media (max-width: 768px) {
+                    font-size: .87rem;
+                    margin-bottom: 20px;
+                }
+                span {
+                    color: #70B183;
+                }
+            }
+            .director-name {
+                display: flex;
+                line-height: 170%;
+                justify-content: flex-end;
+                @media (max-width: 768px) {
+                    font-size: .87rem;
+                }
+            }
+        }
+    }
+}
+
+.company-vido-main {
+    width: 100%;
+    position: relative;
+    @media (max-width: 990px) {
+        height: 400px;
+    }
+    @media (max-width: 768px) {
+        height: 320px;
+    }
+    .poster {
+        position: absolute;
+        display: block;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        @media (max-width: 990px) {
+            background: linear-gradient(90deg, #DDC8A7 0%, #98815C 100%);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            position: relative;
+        }
+        .desk-img {
+            @media (max-width: 990px) {
+                display: none;
+            }
+        }
+        .mob-img {
+            display: none;
+            @media(max-width: 990px) {
+                display: block;
+                top: 40%;
+                position: relative;
+            }
+        }
+    }
+    video {
+        width: 100%;
+        height: 440px;
+        opacity: 0;
+        @media (max-width: 990px) {
+            max-width: 100%;
+            height: 320px;
+        }
+    }
+}
+
+.why-about {
+    margin-bottom: 120px;
+    @media (max-width: 990px) {
+        margin-bottom: 60px;
+    }
+    .company-title {
+        margin-bottom: 40px;
+        @media (max-width: 990px) {
+            margin-bottom: 30px;
+        }
+    }
+    .why-about-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        @media (max-width: 990px) {
+            display: block;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .why-about-box {
+            color: $colortext;
+            text-align: center;
+            @media (max-width: 990px) {
+                margin: 30px 0;
+            }
+            img {
+                margin-bottom: 30px;
+            }
+            h3 {
+                margin-bottom: 15px;
+                font-size: 1.125rem;
+                font-family: "Museo-bold";
+                @media (max-width: 768px) {
+                    font-size: 1rem;
+                }
+            }
+            p {
+                font-size: 1.125rem;
+                font-family: "Museo-regular";
+                @media (max-width: 768px) {
+                    font-size: .87rem;
+                }
+            }
+        }
+    }
+}
+
+
+.confession {
+    .company-title {
+        margin-bottom: 10px;
+    }
+    .confession-text {
+        display: block;
+        font-size: 1.125rem;
+        font-family: "Museo-regular";
+        color: $colortext;
+        max-width: 575px;
+        margin-bottom: 70px;
+        @media (max-width: 990px) {
+            margin-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+            font-size: .87rem;
+        }
+    }
+}
+
+.confession-tabs {
+    position: relative;
+    &::before {
+        content: url(../img/company/vetka-2.png);
+        position: absolute;
+        right: 0;
+        top: -160px;
+        z-index: -1;
+        @media (max-width: 990px) {
+            display: none;
+        }
+    }
+}
+
+.document-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    left: -20px;
+    @media (max-width: 990px) {
+        left: 0;
+        justify-content: center;
+    }
+    .documet-box {
+        text-align: center;
+        margin: 10px 15px;
+        a {
+            display: block;
+            img {
+                max-width: 100%;
+                height: 200px;
+                @media (max-width: 990px) {
+                    height: auto;
+                }
+            }
+        }
+        .document-text {
+            font-size: 1.05rem;
+            font-family: "Museo-regular";
+        }
+    }
+    .documet-box:first-child {
+        margin-left: 0;
+    }
+}
+
+.review {
+    position: relative;
+    &::before {
+        content: url(../img/company/circle-com.svg);
+        position: absolute;
+        left: 0;
+        top: -50px;
+        z-index: -1;
+        @media (max-width: 990px) {
+            display: none;
+        }
+    }
+    .company-title {
+        margin-bottom: 10px
+    }
+    .review-text {
+        display: block;
+        font-size: 1.125rem;
+        font-family: "Museo-regular";
+        color: $colortext;
+        max-width: 740px;
+        margin-bottom: 60px;
+        @media (max-width: 990px) {
+            margin-bottom: 30px;
+            max-width: none;
+        }
+        @media (max-width: 768px) {
+            font-size: .87rem;
+        }
+        a {
+            font-family: "Museo-light";
+            color: #59956A;
+            text-decoration: underline;
+            display: none;
+            &:hover {
+                color: #59956A;
+            }
+        }
+    }
+    .review-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1100px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .review-box {
+            position: relative;
+            margin: 0 10px;
+        }
+        .review-box:first-child{
+            margin-left: 0;
+        }
+        .review-box:last-child{
+            margin-right: 0;
+        }
+        .poster-min {
+            position: absolute;
+            display: block;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            img {
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+                display: block;
+                position: relative;
+                top: 30%;
+            }
+        }
+        .video-min {
+            max-width: 375px;
+            height: 235px;
+            @media (max-width: 576px) {
+                max-width: 350px;
+            }
+            position: relative;
+        }
+    }
+}
+
+.skills-company-container {
+    display: flex;
+    flex-direction: column;
+    .skills-company-box {
+        margin-bottom: 50px;
+        font-family: "Museo-regular";
+        @media (max-width: 990px) {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        @media (max-width: 576px) {
+            align-items: flex-start;
+        }
+        .skills-company-title {
+            font-size: 1.125rem;
+            color: #59956A;
+            margin-bottom: 15px;
+            position: relative;
+            text-transform: uppercase;
+            @media (max-width: 990px) {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+            &::after {
+                @media (max-width: 576px) {
+                    content: url(../img/company/small-elps.svg);
+                    position: absolute;
+                    right: 0;
+                    bottom: -10px;
+                }   
+            }
+        }
+        .skills-company-text {
+            color: $colortext;
+            font-size: 1.125rem;
+            line-height: 170%;
+            @media (max-width: 990px) {
+                font-size: .87rem;
+            }
+        }
+    }
+    .skills-company-group {
+        display: flex;
+        justify-content: center;
+        @media (max-width: 990px) {
+            flex-direction: column;
+        }
+    }
+    .skills-company-wrap-1 {
+        text-align: right;
+        @media (max-width: 990px) {
+            text-align: left;
+        }
+        .first {
+            position: relative;
+            right: -90px;
+            top: -20px;
+            @media (max-width: 990px) {
+                right: 0;
+                top: 0;
+            }
+        }
+        .last {
+            position: relative;
+            right: -20px;
+            margin-bottom: 20px;
+            @media (max-width: 990px) {
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+    .eleps {
+       display: flex;
+       align-items: center;
+       margin: 20px;
+       position: relative;
+       bottom: -40px;
+       @media (max-width: 990px) {
+           display: none;
+       }
+    }
+    .skills-company-wrap-2 {
+        text-align: left;
+        .first {
+            position: relative;
+            left: -90px;
+            top: -20px;
+            @media (max-width: 990px) {
+                left: 0;
+                top: 0;
+            }
+        }
+        .last {
+            position: relative;
+            left: -20px;
+            margin-bottom: 20px;
+            @media (max-width: 990px) {
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+    .skills-company-wrap-3 {
+        text-align: center;
+        @media (max-width: 990px) {
+            text-align: left;
+            margin-bottom: 0;
+        }
+    }
+}

@@ -9,10 +9,12 @@ footer {
         color: $colortext;
         font-family: "Museo-regular";
         white-space: nowrap;
-        margin-top: 20px;
         text-decoration: underline;
         @media (max-width: 990px) {
             margin-top: 10px;
+        }
+        @media (max-width: 576px) {
+            display: none;
         }
     }
     .footer-container {
@@ -40,7 +42,7 @@ footer {
                 display: none;
             }
             .catalog-title {
-                font-size: 1.1rem;
+                font-size: 1.05rem;
                 color: $colortext;
                 font-family: "Museo-regular";
                 margin-bottom: 15px;
@@ -52,7 +54,7 @@ footer {
                 li {
                     padding: 5px 0;
                     a {
-                        font-size: .95rem;
+                        font-size: .82rem;
                         font-family: "Museo-regular";
                         opacity: .7;
                         color: $colortext;
@@ -77,11 +79,18 @@ footer {
                 list-style-position: inside;
                 column-count: 2;
                 list-style-type: decimal;
+                margin-top: -12px;
                 @media (max-width: 990px) {
                     margin: 10px 0;
                 }
                 li {
                     padding: 14px 0;
+                    &:first-child {
+                        display: none;
+                        @media (max-width: 990px) {
+                            display: block;
+                        }
+                    }
                     a {
                         font-size: 1.05rem;
                         color: $colortext;
@@ -95,7 +104,7 @@ footer {
                         }
                     }
                 }
-                li:nth-child(3) {
+                li:nth-child(4) {
                     padding-bottom: 0;
                 }
             }
@@ -105,10 +114,11 @@ footer {
             justify-content: center;
             flex-direction: column;
             align-items: flex-end;
+            padding: 0 0 3px 0;
             a {
                 font-size: 1.15rem;
                 color: $colortext;
-                margin-bottom: 25px;
+                margin-bottom: 28px;
                 font-family: "Lato-bold";
                 &:hover {
                     text-decoration: underline;
@@ -173,6 +183,9 @@ footer {
     font-size: 1.1rem;
     margin-top: 20px;
     display: block;
+    @media (max-width: 576px) {
+        display: none;
+    }
     &::after {
         content: url(../img/icon/up.svg);
         position: relative;
